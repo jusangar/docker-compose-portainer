@@ -1,17 +1,17 @@
+networks:
+  frontend:
+    external: true
+
 services:
- portainer:
+  portainer:
     image: portainer/portainer
     container_name: portainer
+    restart: always
     privileged: true
     volumes:
       - './data:/data'
       - '/var/run/docker.sock:/var/run/docker.sock'
-    restart: unless-stopped
     ports:
-      - '8000:8000' # Data port
+      - '8000:8000' # Portainer Agent
       - '9443:9443' # HTTPS
       - '9000:9000' # HTTP
-networks:
-  default:
-    external: true
-    name: noctis
