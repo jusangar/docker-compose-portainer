@@ -1,6 +1,6 @@
 networks:
   frontend:
-    external: true
+    name: frontend
 
 services:
   portainer:
