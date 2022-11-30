@@ -1,6 +1,6 @@
 networks:
   frontend:
-    name: frontend
+    name: frontend # Set exact name of network
 
 services:
   portainer:
